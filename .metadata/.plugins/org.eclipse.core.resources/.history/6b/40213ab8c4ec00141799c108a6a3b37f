@@ -1,0 +1,6 @@
+package com.wosai.upaydemo.wight;
+
+
+public interface PageIndicator extends ViewPager.OnPageChangeListener{
+
+}

@@ -1,0 +1,7 @@
+package com.wosai.upaydemo.wight;
+
+public class IconTabPageIndicator {
+
+	private static final CharSequence EMPTY_TITLE = "";
+	
+}

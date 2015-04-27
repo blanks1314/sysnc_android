@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wosai_upay_bg_white">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        style="@style/style_top_header"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/btnBack"
+            style="@style/style_base_horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical">
+
+            <ImageView style="@style/style_arrow_back" />
+
+            <TextView style="@style/style_phone_text_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvStoreName"
+            style="@style/style_phone_text_title"
+            android:layout_centerInParent="true"
+            android:text="" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/wosai_upay_margin_bottom"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rbPos"
+            style="@style/style_button_radio_left"
+            android:checked="true"
+            android:text="@string/wosai_upay_text_radio_pos" />
+
+        <RadioButton
+            android:id="@+id/rbPrinter"
+            style="@style/style_button_radio_right"
+            android:text="@string/wosai_upay_text_radio_printer" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/line"
+        style="@style/style_divider_line"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/radioGroup" />
+
+    <RelativeLayout
+        android:layout_below="@+id/top"
+        android:id="@+id/rl_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
+<!-- From: file:/F:/workspace_studio/upay/app/src/main/res/layout/upay_activity_setting_phone.xml -->

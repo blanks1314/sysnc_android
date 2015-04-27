@@ -1,0 +1,197 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wosai_upay_phone_bg">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/llError"
+            style="@style/style_base_fill_v"
+            android:visibility="gone">
+
+            <LinearLayout
+                style="@style/style_rl_btn_main_item"
+                android:background="@color/wosai_upay_bg_white">
+
+                <ImageView
+                    android:id="@+id/imgError"
+                    style="@style/style_img_btn_phone"
+                    android:layout_gravity="center"
+                    android:src="@drawable/wosai_upay_img_state_error" />
+
+                <RelativeLayout
+                    style="@style/style_base_fill"
+                    android:gravity="center|left">
+
+                    <TextView
+                        android:id="@+id/tvErrorMsg"
+                        style="@style/style_text_content_black"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:maxLength="32"
+                        android:text="ERROR" />
+
+                    <TextView
+                        android:id="@+id/tvErrorCode"
+                        style="@style/style_text_content_smaller"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tvErrorMsg"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/wosai_upay_margin_common"
+                        android:ellipsize="end"
+                        android:maxLength="32"
+                        android:text="1111derhgwer1"
+                        android:textColor="@color/wosai_upay_text_color_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/style_base_horizontal"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
+                android:layout_marginLeft="@dimen/wosai_upay_margin_item"
+                android:layout_marginTop="@dimen/wosai_upay_margin_item">
+
+                <TextView
+                    style="@style/style_text_content_smaller"
+                    android:text="@string/wosai_upay_text_order_id"
+                    android:textColor="@color/wosai_upay_text_color_gray" />
+
+                <TextView
+                    android:id="@+id/tvOrderId"
+                    style="@style/style_text_content_smaller"
+                    android:ellipsize="end"
+                    android:maxLength="32"
+                    android:text="12345678954"
+                    android:textColor="@color/wosai_upay_text_color_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/style_base_horizontal"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
+                android:layout_marginLeft="@dimen/wosai_upay_margin_item">
+
+                <TextView
+                    style="@style/style_text_content_smaller"
+                    android:text="@string/wosai_upay_text_order_time"
+                    android:textColor="@color/wosai_upay_text_color_gray" />
+
+                <TextView
+                    android:id="@+id/tvOrderTime"
+                    style="@style/style_text_content_smaller"
+                    android:ellipsize="end"
+                    android:maxLength="32"
+                    android:text="2015-05-06：03"
+                    android:textColor="@color/wosai_upay_text_color_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/style_base_horizontal"
+                android:layout_marginBottom="@dimen/wosai_upay_margin_border"
+                android:layout_marginLeft="@dimen/wosai_upay_margin_item"
+                android:layout_marginTop="@dimen/wosai_upay_margin_border">
+
+                <TextView
+                    style="@style/style_text_content_smaller"
+                    android:text="@string/wosai_upay_text_rmb_icon" />
+
+                <TextView
+                    android:id="@+id/tvAmount"
+                    style="@style/style_text_content_black"
+                    android:ellipsize="end"
+                    android:maxLength="32"
+                    android:text="12.34"
+                    android:textSize="@dimen/wosai_upay_text_size_24" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/style_phone_divider_line" />
+
+            <Button
+                android:id="@+id/btnError"
+                style="@style/style_button_common_orange_phone"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/wosai_upay_btn_gray_height"
+                android:text="@string/wosai_upay_text_ok" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llProgress"
+        style="@style/style_base_fill_v"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/wosai_upay_bg_white"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView android:id="@+id/imgLoading" style="@style/style_img_progress_bar_phone" />
+
+            <ImageView style="@style/style_icon_text_shou" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgNotice"
+            android:layout_width="@dimen/wosai_upay_phone_img_mpos"
+            android:layout_height="@dimen/wosai_upay_phone_img_mpos"
+            android:layout_centerInParent="true"
+            android:src="@drawable/wosai_img_input_pwd"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tvNotice"
+            style="@style/style_text_content_black"
+            android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+            android:text="@string/wosai_upay_text_executing"
+            android:textColor="@color/wosai_upay_text_color_gray" />
+        <TextView
+            android:id="@+id/tvCountDownTimer"
+            style="@style/style_text_content_black"
+            android:layout_marginTop="@dimen/wosai_upay_main_title_margin_top"
+            android:text="倒计时"
+            android:textColor="@color/wosai_upay_common_green" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/top"
+        style="@style/style_top_header"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/btnBack"
+            style="@style/style_base_horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical">
+
+            <ImageView style="@style/style_arrow_back" />
+
+            <TextView style="@style/style_phone_text_back" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout><!-- From: file:/F:/workspace_studio/upay/app/src/main/res/layout/upay_activity_mpos_phone.xml -->
