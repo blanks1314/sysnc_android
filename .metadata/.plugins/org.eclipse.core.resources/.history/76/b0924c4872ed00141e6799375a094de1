@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="center_horizontal"
+    android:padding="10dp">
+
+     <LinearLayout style="@style/linear_style_1" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="二维码:" />
+
+        <EditText
+            android:id="@+id/tv_qrcode"
+            style="@style/edit_style_1"
+            android:textSize="12sp"
+            android:hint="请输入二维码(无界面交易必须输入)" />
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/btn_pay"
+        style="@style/btn_style_1"
+        android:layout_marginTop="50dp"
+        android:text="支付宝扫码支付" />
+    <Button
+        android:id="@+id/btn_pay_none"
+        style="@style/btn_style_1"
+        android:text="支付宝无界面支付" />
+    <Button
+        android:id="@+id/btn_qrcode"
+        style="@style/btn_style_1"
+        android:text="支付宝付款码生成" />
+
+</LinearLayout>

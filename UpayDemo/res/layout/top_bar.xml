@@ -3,15 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/front_gray" >
+    android:background="@color/btn_selecter_2" >
     
     <TextView android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="@string/app_name"
-        android:textSize="20dp"
-        android:padding="5dp"
+        android:textSize="20sp"
+        android:padding="8dp"
         android:textColor="@color/white"
         />
     

@@ -1,0 +1,32 @@
+package com.wosai.upaydemo;
+
+import com.wosai.upaydemo.wight.IconTabPageIndicator;
+
+import android.app.Activity;
+import android.app.Fragment;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
+import com.wosai.upaydemo.R;
+
+public class HomeActivity extends FragmentActivity {
+
+	private ViewPager mViewPager;
+	private IconTabPageIndicator mIndicator;
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+    }
+    
+    /**
+     * 初始化界面
+     */
+    private void initView(){
+    	mViewPager = (ViewPager) findViewById(R.id.vp_content);
+    	mIndicator = findViewById(R.id.indicator);
+    	
+    }
+    
+}

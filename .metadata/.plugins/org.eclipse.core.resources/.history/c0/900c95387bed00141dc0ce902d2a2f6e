@@ -1,0 +1,9 @@
+package com.wosai.upaydemo.wight;
+
+import android.support.v4.app.Fragment;
+
+public class BaseFragment extends Fragment{
+	private String title;
+	private int iconId;
+
+}

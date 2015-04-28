@@ -2,3 +2,32 @@
 1430128225676	Delete element
 1430128719974	Delete element
 1430128999028	Delete element
+1430189868767	Rename resource 'arrow-right.png'
+1430191398815	Delete element
+1430191401066	Delete element
+1430191403995	Delete element
+1430200535158	Extracts string 'StoreId：' into R.string.storeid_
+1430200542950	Extracts string '03322111001200200000024' into R.string._03322111001200200000024
+1430200549349	Extracts string 'AppId：' into R.string.appid_
+1430200552350	Extracts string '1001200200000024' into R.string._1001200200000024
+1430200557388	Extracts string 'AppKey：' into R.string.appkey_
+1430200560578	Extracts string 'dc1277093df84ff23b885cc776deca13' into R.string.dc1277093df84ff23b885cc776deca13
+1430200573195	Extracts string '订单号' into R.string._orderid
+1430200581319	Extracts string '请输入订单号(非必输)' into R.string.input_orderid
+1430200589756	Extracts string '交易金额' into R.string.amount
+1430200598362	Extracts string '请输入交易金额(单位:分)' into R.string.input_amount
+1430200610426	Extracts string '商品名称' into R.string.subject
+1430200617647	Extracts string '喔噻体验商品' into R.string.input_subject
+1430200624889	Extracts string '货币类型' into R.string.currtype
+1430200642292	Extracts string '操作员' into R.string.operator
+1430200649981	Extracts string '请输入操作员' into R.string.input_operator
+1430200658362	Extracts string '交易描述' into R.string.remar
+1430200691526	Extracts string '请输入交易描述' into R.string.input_remark
+1430201610437	Delete element
+1430204562533	Copy file
+1430206944571	Rename resource 'wechatIcon.png'
+1430207421409	Encapsulate field 'title'
+1430207424995	Encapsulate field 'iconId'
+1430208209723	Copy compilation unit
+1430208216865	Copy compilation unit
+1430208228196	Copy compilation unit

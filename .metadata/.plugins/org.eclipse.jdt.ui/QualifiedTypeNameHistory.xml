@@ -4,7 +4,6 @@
 <fullyQualifiedTypeName name="android.support.v7.appcompat.R"/>
 <fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="android.support.v7.internal.widget.ScrollingTabContainerView.TabView"/>
-<fullyQualifiedTypeName name="android.support.v4.view.ViewPager"/>
 <fullyQualifiedTypeName name="android.widget.LinearLayout"/>
 <fullyQualifiedTypeName name="com.wosai.upaydemo.wight.PageIndicator"/>
 <fullyQualifiedTypeName name="android.content.Context"/>
@@ -15,4 +14,22 @@
 <fullyQualifiedTypeName name="android.support.v4.view.PagerAdapter"/>
 <fullyQualifiedTypeName name="android.widget.ImageView"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="android.app.Fragment"/>
+<fullyQualifiedTypeName name="android.support.v4.app.FragmentActivity"/>
+<fullyQualifiedTypeName name="android.support.v4.view.ViewPager"/>
+<fullyQualifiedTypeName name="com.wosai.upaydemo.wight.IconTabPageIndicator"/>
+<fullyQualifiedTypeName name="com.wosai.upaydemo.R.id"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.support.v4.app.FragmentPagerAdapter"/>
+<fullyQualifiedTypeName name="com.wosai.upaydemo.wight.IconPagerAdapter"/>
+<fullyQualifiedTypeName name="android.support.v4.app.Fragment"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.lang.CharSequence"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.wosai.upaydemo.wight.BaseFragment"/>
+<fullyQualifiedTypeName name="com.wosai.upaydemo.SettingFragment"/>
+<fullyQualifiedTypeName name="com.wosai.upaydemo.R.drawable"/>
+<fullyQualifiedTypeName name="com.wosai.upaydemo.R.layout"/>
+<fullyQualifiedTypeName name="com.wosai.upaydemo.wight.FragmentAdapter"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UpayDemo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="storeid_">StoreId：</string>
+    <string name="_03322111001200200000024">03322111001200200000024</string>
+    <string name="appid_">AppId：</string>
+    <string name="_1001200200000024">1001200200000024</string>
+    <string name="appkey_">AppKey：</string>
+    <string name="dc1277093df84ff23b885cc776deca13">dc1277093df84ff23b885cc776deca13</string>
+    <string name="_orderid">订单号</string>
+    <string name="input_orderid">请输入订单号(非必输)</string>
+
+</resources>

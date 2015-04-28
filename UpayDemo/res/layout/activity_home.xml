@@ -5,9 +5,9 @@
     android:orientation="vertical"
     tools:context="${relativePackage}.${activityClass}" >
 
-    <include android:layout_width="wrap_content"
+    <include android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@+id/action_bar"/>
+        layout="@layout/top_bar"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_content"
@@ -16,6 +16,7 @@
         android:layout_weight="1"
         />
     <com.wosai.upaydemo.wight.IconTabPageIndicator
+        android:id="@+id/indicator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
