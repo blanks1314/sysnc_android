@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <Button
+        android:id="@+id/btn_pay"
+        style="@style/btn_style_1"
+        android:layout_marginTop="50dp"
+        android:text="拉卡拉刷卡支付" />
+
+    <Button
+        android:id="@+id/btn_pay_none"
+        style="@style/btn_style_1"
+        android:text="支付宝无界面支付" />
+
+    <Button
+        android:id="@+id/btn_qrcode"
+        style="@style/btn_style_1"
+        android:text="支付宝付款二维码生成" />
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="调用结果"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_payResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text_shape"
+        android:hint="结果展示区域"
+        android:minHeight="100dp"
+        android:padding="5dp" />
+
+</LinearLayout>

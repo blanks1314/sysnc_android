@@ -1,0 +1,113 @@
+package com.wosai.upaydemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.wosai.upaydemo.wight.BaseFragment;
+import com.wosai.upaydemo.wight.FragmentAdapter;
+import com.wosai.upaydemo.wight.IconTabPageIndicator;
+
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.widget.TextView;
+
+public class HomeActivity extends FragmentActivity {
+
+	private ViewPager mViewPager;
+	private IconTabPageIndicator mIndicator;
+	private TextView textTitle;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_home);
+		initView();
+	}
+
+	/**
+	 * 初始化界面
+	 */
+	private void initView() {
+		mViewPager = (ViewPager) findViewById(R.id.vp_content);
+		mIndicator = (IconTabPageIndicator) findViewById(R.id.indicator);
+		textTitle = (TextView) findViewById(R.id.tv_title);
+		FragmentAdapter adapter = new FragmentAdapter(initFragment(),
+				getSupportFragmentManager());
+		mViewPager.setAdapter(adapter);
+		mIndicator.setViewPager(mViewPager);
+		mIndicator.setOnPageChangeListener(new OnPageChangeListener() {
+
+			@Override
+			public void onPageSelected(int arg0) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void onPageScrolled(int arg0, float arg1, int arg2) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void onPageScrollStateChanged(int index) {
+				// TODO Auto-generated method stub
+				switch (index) {
+				case 0:
+					textTitle.setText("设置");
+					break;
+				case 1:
+					textTitle.setText("银联支付");
+					break;
+				case 2:
+					textTitle.setText("支付宝支付");
+					break;
+				case 3:
+					textTitle.setText("微信支付");
+					break;
+				case 4:
+					textTitle.setText("交易记录");
+					break;
+
+				}
+			}
+		});
+
+	}
+
+	private List<BaseFragment> initFragment() {
+
+		List<BaseFragment> fragments = new ArrayList<BaseFragment>();
+
+		BaseFragment settingFragment = new SettingFragment();
+		settingFragment.setTitle("设置");
+		settingFragment.setIconId(R.drawable.setting);
+		fragments.add(settingFragment);
+
+		BaseFragment unionFragment = new LakalaFragment();
+		unionFragment.setTitle("银联");
+		unionFragment.setIconId(R.drawable.union_pay);
+		fragments.add(unionFragment);
+
+		BaseFragment alipayFragment = new AlipayFragment();
+		alipayFragment.setTitle("Alipay");
+		alipayFragment.setIconId(R.drawable.alipay);
+		fragments.add(alipayFragment);
+
+		BaseFragment wexinFragment = new WexinFragment();
+		wexinFragment.setTitle("微信");
+		wexinFragment.setIconId(R.drawable.wechat);
+		fragments.add(wexinFragment);
+
+		BaseFragment recordFragment = new RecordFragment();
+		recordFragment.setTitle("记录");
+		recordFragment.setIconId(R.drawable.history);
+		fragments.add(recordFragment);
+
+		return fragments;
+
+	}
+
+}

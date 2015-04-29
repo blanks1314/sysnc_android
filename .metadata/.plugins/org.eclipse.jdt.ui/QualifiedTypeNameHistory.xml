@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.view.ViewParent"/>
 <fullyQualifiedTypeName name="android.support.v7.appcompat.R"/>
-<fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="android.support.v7.internal.widget.ScrollingTabContainerView.TabView"/>
 <fullyQualifiedTypeName name="android.widget.LinearLayout"/>
 <fullyQualifiedTypeName name="com.wosai.upaydemo.wight.PageIndicator"/>
@@ -30,6 +29,10 @@
 <fullyQualifiedTypeName name="com.wosai.upaydemo.wight.BaseFragment"/>
 <fullyQualifiedTypeName name="com.wosai.upaydemo.SettingFragment"/>
 <fullyQualifiedTypeName name="com.wosai.upaydemo.R.drawable"/>
-<fullyQualifiedTypeName name="com.wosai.upaydemo.R.layout"/>
 <fullyQualifiedTypeName name="com.wosai.upaydemo.wight.FragmentAdapter"/>
+<fullyQualifiedTypeName name="com.wosai.upaydemo.R.layout"/>
+<fullyQualifiedTypeName name="com.wosai.upaydemo.AlipayFragment"/>
+<fullyQualifiedTypeName name="com.wosai.upaydemo.RecordFragment"/>
+<fullyQualifiedTypeName name="android.widget.Spinner"/>
+<fullyQualifiedTypeName name="android.view.View"/>
 </qualifiedTypeNameHistroy>

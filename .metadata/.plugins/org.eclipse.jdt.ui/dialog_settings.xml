@@ -3,8 +3,8 @@
 	<section name="DialogBounds_OverrideMethodDialog">
 		<item value="582" key="DIALOG_WIDTH"/>
 		<item value="126" key="DIALOG_Y_ORIGIN"/>
-		<item value="432" key="DIALOG_X_ORIGIN"/>
 		<item value="519" key="DIALOG_HEIGHT"/>
+		<item value="432" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
@@ -26,8 +26,8 @@
 	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="SourceActionDialog.methods">
-		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="Comments"/>
+		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="SynchronizedModifier"/>
 		<item value="false" key="FinalModifier"/>
 	</section>
@@ -47,7 +47,7 @@
 	</section>
 	<section name="NewClassWizardPage">
 		<item value="false" key="create_constructor"/>
-		<item value="true" key="create_unimplemented"/>
 		<item value="false" key="create_main"/>
+		<item value="true" key="create_unimplemented"/>
 	</section>
 </section>
