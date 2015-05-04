@@ -1,0 +1,25 @@
+package com.wosai.upaydemo.utils;
+
+import java.util.List;
+
+import com.wosai.upaydemo.bean.DealInfo;
+
+import cn.wosai.upay.OrderInfo;
+import cn.wosai.upay.UpayResult;
+
+public class EnvUtil {
+
+	public static DealInfo parseDeal(UpayResult result) {
+		DealInfo info = new DealInfo();
+		info.setAcount(CheckUtil.isEmpty(result.getAccount()) ? "" : result
+				.getAccount());
+		info.setAmount(result.getAmount());
+		info.setbNo(CheckUtil.isEmpty(result.getBatchNo())?"":result.getBatchNo())
+	}
+
+	public static List<OrderInfo> parseDeal(DealInfo... infos) {
+		return null;
+
+	}
+
+}

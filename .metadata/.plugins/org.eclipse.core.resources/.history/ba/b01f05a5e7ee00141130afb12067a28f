@@ -1,0 +1,9 @@
+package com.wosai.upaydemo.utils;
+/**
+ * The Util Class for check the String or the widget is empty.(TextView,EditTextView)
+ * @author lei
+ *
+ */
+public class CheckUtil {
+
+}

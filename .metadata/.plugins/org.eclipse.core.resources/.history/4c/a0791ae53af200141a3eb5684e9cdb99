@@ -1,0 +1,22 @@
+package com.wosai.upaydemo.utils;
+
+import cn.wosai.upay.UpayResult;
+
+import com.wosai.upaydemo.Result;
+
+import net.tsz.afinal.FinalDb;
+import android.content.Context;
+
+public class DBUtil {
+
+	public static FinalDb getOperation(Context ctx) {
+		return FinalDb.create(ctx, "UpayDemo.db");
+	}
+
+	public static Result payResultParse(UpayResult ur) {
+
+		Result r = new Result();
+
+	}
+
+}

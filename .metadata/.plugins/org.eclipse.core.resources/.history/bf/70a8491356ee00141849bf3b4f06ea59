@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_result"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/linear_style_1" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/storeid_" />
+
+        <TextView
+            android:id="@+id/tv_storeId"
+            style="@style/text_style_1"
+            android:text="@string/_03322111001200200000024" />
+
+        <ImageView
+            style="@style/img_btn_1"
+            android:contentDescription="@null"
+            android:src="@drawable/arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_style_1" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/appid_" />
+
+        <TextView
+            android:id="@+id/tv_appId"
+            style="@style/text_style_1"
+            android:text="@string/_1001200200000024" />
+
+        <ImageView
+            style="@style/img_btn_1"
+            android:contentDescription="@null"
+            android:src="@drawable/arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_style_1" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/appkey_" />
+
+        <TextView
+            android:id="@+id/tv_appKey"
+            style="@style/text_style_1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/dc1277093df84ff23b885cc776deca13" />
+
+        <ImageView
+            style="@style/img_btn_1"
+            android:contentDescription="@null"
+            android:src="@drawable/arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_style_1" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_orderid" />
+
+        <EditText
+            android:id="@+id/et_orderId"
+            style="@style/edit_style_1"
+            android:hint="@string/input_orderid" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_style_1" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/amount" />
+
+        <EditText
+            android:id="@+id/et_amount"
+            style="@style/edit_style_1"
+            android:hint="@string/input_amount" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_style_1" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/subject" />
+
+        <EditText
+            android:id="@+id/et_subject"
+            style="@style/edit_style_1"
+            android:text="@string/input_subject" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_style_1" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/currtype" />
+
+        <Spinner
+            android:id="@+id/spn_currType"
+            style="@style/spn_style_1" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_style_1" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/operator" />
+
+        <EditText
+            android:id="@+id/et_operator"
+            style="@style/edit_style_1"
+            android:hint="@string/input_operator" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="@string/remark" />
+
+    <EditText
+        android:id="@+id/et_remark"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:gravity="left|top"
+        android:hint="@string/input_remark"
+        android:inputType="textMultiLine" />
+
+</LinearLayout>

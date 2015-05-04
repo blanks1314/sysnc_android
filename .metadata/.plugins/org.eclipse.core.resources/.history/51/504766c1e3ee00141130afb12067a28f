@@ -1,0 +1,9 @@
+package com.wosai.upaydemo;
+/**
+ * this is a check String or 
+ * @author lei
+ *
+ */
+public class CheckUtil {
+
+}

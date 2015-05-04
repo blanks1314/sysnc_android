@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1" >
+
+    <TextView
+        android:id="@+id/tvOrderId"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:text="订单号" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.2"
+        android:text="时间" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvMethod"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.2"
+        android:text="支付方式" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvState"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.2"
+        android:text="状态" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvRemark"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.2"
+        android:text="备注" >
+    </TextView>
+
+</LinearLayout>

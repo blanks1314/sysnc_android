@@ -10,7 +10,7 @@
     <string name="appkey_">AppKey：</string>
     <string name="dc1277093df84ff23b885cc776deca13">dc1277093df84ff23b885cc776deca13</string>
     <string name="_orderid">订单号</string>
-    <string name="input_orderid">请输入订单号(非必输)</string>
+    <string name="input_orderid">默认为当前时间戳</string>
     <string name="amount">交易金额</string>
     <string name="input_amount">请输入交易金额(单位:分)</string>
     <string name="subject">商品名称</string>
@@ -20,5 +20,6 @@
     <string name="input_operator">请输入操作员</string>
     <string name="remark">交易描述</string>
     <string name="input_remark">请输入交易描述</string>
+    <string name="setting">设置</string>
 
 </resources>

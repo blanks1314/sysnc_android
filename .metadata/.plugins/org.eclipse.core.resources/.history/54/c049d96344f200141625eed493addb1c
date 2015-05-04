@@ -1,0 +1,37 @@
+package com.wosai.upaydemo.bean;
+
+import java.io.Serializable;
+
+import cn.wosai.upay.OrderInfo;
+import cn.wosai.upay.PayMethod;
+
+public class DealInfo implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3497376597955929028L;
+
+	private int id;
+	private String amount;
+	private String acount;
+	private String bNo;
+	private String cNo;
+	private PayMethod payMethod;
+	private int action;
+	private String time;
+	private int state;
+	
+	
+	
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+}

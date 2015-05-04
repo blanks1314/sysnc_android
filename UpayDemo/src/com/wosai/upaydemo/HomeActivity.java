@@ -3,21 +3,27 @@ package com.wosai.upaydemo;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.wosai.upaydemo.wight.BaseFragment;
-import com.wosai.upaydemo.wight.FragmentAdapter;
-import com.wosai.upaydemo.wight.IconTabPageIndicator;
-
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.widget.TextView;
 
+import cn.wosai.upay.OrderInfo;
+
+import com.wosai.upaydemo.utils.ViewUtils;
+import com.wosai.upaydemo.widget.BaseFragment;
+import com.wosai.upaydemo.widget.FragmentAdapter;
+import com.wosai.upaydemo.widget.IconTabPageIndicator;
+
 public class HomeActivity extends FragmentActivity {
 
 	private ViewPager mViewPager;
 	private IconTabPageIndicator mIndicator;
 	private TextView textTitle;
+	private Dialog mDialog;
+	private List<BaseFragment> fragments;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,7 @@ public class HomeActivity extends FragmentActivity {
 		textTitle = (TextView) findViewById(R.id.tv_title);
 		FragmentAdapter adapter = new FragmentAdapter(initFragment(),
 				getSupportFragmentManager());
+		mDialog = ViewUtils.createLoadingDialog(this, "数据加载中....");
 		mViewPager.setAdapter(adapter);
 		mIndicator.setViewPager(mViewPager);
 		mIndicator.setTitles(new String[] { "设置", "银联支付", "支付宝支付", "微信支付",
@@ -80,7 +87,7 @@ public class HomeActivity extends FragmentActivity {
 
 	private List<BaseFragment> initFragment() {
 
-		List<BaseFragment> fragments = new ArrayList<BaseFragment>();
+		 fragments = new ArrayList<BaseFragment>();
 
 		BaseFragment settingFragment = new SettingFragment();
 		settingFragment.setTitle("设置");
@@ -111,4 +118,13 @@ public class HomeActivity extends FragmentActivity {
 
 	}
 
+	public interface IGetData {
+		boolean checkData();
+		OrderInfo getOrderInfo();
+	}
+	
+	public SettingFragment getIGetData(){
+		return (SettingFragment) fragments.get(0);
+		
+	}
 }

@@ -1,0 +1,9 @@
+package com.wosai.upaydemo.bean;
+
+import java.io.Serializable;
+
+import cn.wosai.upay.OrderInfo;
+
+public class ActionInfo extends OrderInfo implements Serializable{
+
+}

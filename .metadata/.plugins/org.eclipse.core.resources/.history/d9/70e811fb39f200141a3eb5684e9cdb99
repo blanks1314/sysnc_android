@@ -1,0 +1,21 @@
+package com.wosai.upaydemo.utils;
+
+import net.tsz.afinal.FinalDb;
+import android.content.Context;
+
+public class DBUtil {
+
+	public static DBUtil mDB = new DBUtil();
+
+	private DBUtil() {
+	};
+
+	public static DBUtil getInstance() {
+		return mDB;
+	}
+
+	public static FinalDb getOperation(Context ctx){
+		return new FinalDb.create(ctx,"UpayDemo.db");
+	} 
+	
+}

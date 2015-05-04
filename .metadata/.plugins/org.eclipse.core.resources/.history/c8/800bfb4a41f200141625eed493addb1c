@@ -1,0 +1,7 @@
+package com.wosai.upaydemo.bean;
+
+import cn.wosai.upay.OrderInfo;
+
+public class ActionInfo extends OrderInfo{
+
+}

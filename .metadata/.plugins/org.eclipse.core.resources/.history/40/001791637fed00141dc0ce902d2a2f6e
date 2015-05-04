@@ -1,7 +1,0 @@
-package com.wosai.upaydemo;
-
-import com.wosai.upaydemo.wight.BaseFragment;
-
-public class AlipayFragment extends BaseFragment{
-
-}

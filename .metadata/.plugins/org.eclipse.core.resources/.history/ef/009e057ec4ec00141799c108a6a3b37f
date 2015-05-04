@@ -1,5 +1,0 @@
-package com.wosai.upaydemo.wight;
-
-public interface PageIndicator {
-
-}

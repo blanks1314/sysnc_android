@@ -1,0 +1,49 @@
+package com.wosai.upaydemo.wight;
+
+import java.util.List;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+/**
+ * BottomNavigBar 添加按钮和页面的适配器
+ * @author lei
+ *
+ */
+public class FragmentAdapter extends FragmentPagerAdapter implements
+		IconPagerAdapter {
+
+	private List<BaseFragment> mFragments;
+
+	public FragmentAdapter(List<BaseFragment> mFragments, FragmentManager fm) {
+		super(fm);
+		// TODO Auto-generated constructor stub
+		this.mFragments = mFragments;
+	}
+
+	@Override
+	public int getIconResId(int index) {
+		// TODO Auto-generated method stub
+		return mFragments.get(index).getIconId();
+	}
+
+	@Override
+	public Fragment getItem(int position) {
+		// TODO Auto-generated method stub
+		return mFragments.get(position);
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return mFragments.size();
+	}
+
+	@Override
+	public CharSequence getPageTitle(int position) {
+		return mFragments.get(position).getTitle();
+
+	}
+
+}

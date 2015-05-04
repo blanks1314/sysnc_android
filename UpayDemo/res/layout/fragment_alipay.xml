@@ -15,7 +15,7 @@
             android:text="二维码:" />
 
         <EditText
-            android:id="@+id/tv_qrcode"
+            android:id="@+id/et_qrcode"
             style="@style/edit_style_1"
             android:textSize="12sp"
             android:hint="请输入二维码(无界面交易必须输入)" />

@@ -5,7 +5,7 @@
     android:versionName="1.0_DEV" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -39,7 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
             android:name="cn.wosai.upay.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/wosai_upay_app_name"
@@ -49,6 +49,8 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.wosai.upaydemo.ModifyActivity" >
         </activity>
         <activity
             android:name="cn.wosai.upay.SettingsActivity"

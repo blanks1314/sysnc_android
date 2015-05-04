@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.wosai.upaydemo.wight.BaseFragment;
+import com.wosai.upaydemo.widget.BaseFragment;
 
 public class RecordFragment extends BaseFragment{
 

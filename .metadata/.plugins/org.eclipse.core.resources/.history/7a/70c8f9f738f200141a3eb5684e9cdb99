@@ -1,0 +1,7 @@
+package com.wosai.upaydemo;
+
+import cn.wosai.upay.UpayResult;
+
+public class Result extends UpayResult{
+
+}

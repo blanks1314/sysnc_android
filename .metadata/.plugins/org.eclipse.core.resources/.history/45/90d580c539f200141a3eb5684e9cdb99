@@ -1,0 +1,14 @@
+package com.wosai.upaydemo.utils;
+
+public class DBUtil {
+
+	public static DBUtil mDB = new DBUtil();
+
+	private DBUtil() {
+	};
+
+	public static DBUtil getInstance() {
+		return mDB;
+	}
+
+}

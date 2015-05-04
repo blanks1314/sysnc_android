@@ -1,0 +1,23 @@
+package com.wosai.upaydemo.utils;
+
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+
+public class ViewUtils {
+
+	public static void showError(String str,Context ctx) {
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
+		builder.setMessage(str)
+				.setCancelable(false)
+				.setPositiveButton("ÖªµÀÁË",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								
+							}}
+		AlertDialog alert = builder.create();
+
+	}
+
+}

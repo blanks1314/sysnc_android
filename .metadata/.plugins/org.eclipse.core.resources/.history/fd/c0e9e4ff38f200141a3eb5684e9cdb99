@@ -1,0 +1,18 @@
+package com.wosai.upaydemo;
+
+import cn.wosai.upay.UpayResult;
+
+public class Result extends UpayResult{
+
+	private int id;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
+}
