@@ -60,8 +60,12 @@ public class LakalaFragment extends BaseFragment {
 								// TODO Auto-generated method stub
 								if (result != null) {
 									textResult.setText(result.toString());
-									DBUtil.getOperation(getActivity()).save(
-											EnvUtil.parseDeal(result));
+									if (result != null
+											&& result.getState() == 1) {
+										DBUtil.getOperation(getActivity())
+												.save(EnvUtil.parseDeal(result,
+														"已支付"));
+									}
 								}
 							}
 						});
@@ -84,8 +88,12 @@ public class LakalaFragment extends BaseFragment {
 								// TODO Auto-generated method stub
 								if (result != null) {
 									textResult.setText(result.toString());
-									DBUtil.getOperation(getActivity()).save(
-											EnvUtil.parseDeal(result));
+									if (result != null
+											&& result.getState() == 1) {
+										DBUtil.getOperation(getActivity())
+												.save(EnvUtil.parseDeal(result,
+														"已支付"));
+									}
 								}
 							}
 						});

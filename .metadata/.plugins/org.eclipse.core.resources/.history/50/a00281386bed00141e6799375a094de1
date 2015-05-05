@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="app_name">UpayDemo</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="storeid_">StoreId：</string>
-    <string name="_03322111001200200000024">03322111001200200000024</string>
-
-</resources>

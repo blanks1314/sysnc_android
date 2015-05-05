@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1" >
+
+    <TextView
+        android:id="@+id/tvOrderId"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:text="F102154891132" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.2"
+        android:text="2015-5-5 9:54" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvMethod"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.2"
+        android:text="UPAY_ALIPAY" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvState"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.2"
+        android:text="已支付" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvRemark"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.2"
+        android:text="0.01" >
+    </TextView>
+
+</LinearLayout>

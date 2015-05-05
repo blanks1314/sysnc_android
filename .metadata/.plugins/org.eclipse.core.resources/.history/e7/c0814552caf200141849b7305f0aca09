@@ -1,0 +1,7 @@
+package com.wosai.upaydemo;
+
+import android.widget.BaseAdapter;
+
+public class RecordAdapter extends BaseAdapter{
+
+}

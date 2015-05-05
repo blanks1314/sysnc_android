@@ -22,7 +22,7 @@ import com.wosai.upaydemo.HomeActivity.IGetData;
 import com.wosai.upaydemo.utils.CheckUtil;
 import com.wosai.upaydemo.utils.DBUtil;
 import com.wosai.upaydemo.utils.EnvUtil;
-import com.wosai.upaydemo.utils.ViewUtils;
+import com.wosai.upaydemo.utils.ViewUtil;
 import com.wosai.upaydemo.widget.BaseFragment;
 
 public class AlipayFragment extends BaseFragment {
@@ -48,7 +48,7 @@ public class AlipayFragment extends BaseFragment {
 	private void initView(View view) {
 
 		mDaGetData = ((HomeActivity) getActivity()).getIGetData();
-		mDialog = ViewUtils.createLoadingDialog(getActivity(), "二维码获取中，请稍后...");
+		mDialog = ViewUtil.createLoadingDialog(getActivity(), "二维码获取中，请稍后...");
 		textResult = (TextView) view.findViewById(R.id.tv_payResult);
 		editQrCode = (EditText) view.findViewById(R.id.et_qrcode);
 		btnPay = (Button) view.findViewById(R.id.btn_pay);
@@ -66,9 +66,10 @@ public class AlipayFragment extends BaseFragment {
 							@Override
 							public void onExecuteResult(UpayResult result) {
 								// TODO Auto-generated method stub
-								if (result != null) {
+								if (result != null && result.getState() == 1) {
 									textResult.setText(result.toString());
-									DBUtil.getOperation(getActivity()).save(EnvUtil.parseDeal(result));
+									DBUtil.getOperation(getActivity()).save(
+											EnvUtil.parseDeal(result, "已支付"));
 								}
 							}
 						});
@@ -84,7 +85,7 @@ public class AlipayFragment extends BaseFragment {
 					return;
 				}
 				if (CheckUtil.isEmpty(editQrCode)) {
-					ViewUtils.showError("请输入付款二维码！", getActivity());
+					ViewUtil.showError("请输入付款二维码！", getActivity());
 					return;
 				}
 				OrderInfo orderInfo = preData();
@@ -94,10 +95,14 @@ public class AlipayFragment extends BaseFragment {
 						new UpayCallBack() {
 
 							@Override
-							public void onExecuteResult(UpayResult arg0) {
+							public void onExecuteResult(UpayResult result) {
 								// TODO Auto-generated method stub
-								textResult.setText(arg0.toString());
-								DBUtil.getOperation(getActivity()).save(EnvUtil.parseDeal(arg0));
+								textResult.setText(result.toString());
+								if (result != null && result.getState() == 1) {
+									textResult.setText(result.toString());
+									DBUtil.getOperation(getActivity()).save(
+											EnvUtil.parseDeal(result, "已支付"));
+								}
 							}
 						});
 			}

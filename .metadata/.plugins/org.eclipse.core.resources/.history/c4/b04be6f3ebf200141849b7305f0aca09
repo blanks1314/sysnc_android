@@ -1,0 +1,22 @@
+package com.wosai.upaydemo.widget;
+
+import android.app.Dialog;
+import android.content.Context;
+
+public class TipDialog extends Dialog{
+
+	Context ctx;
+	public TipDialog(Context context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+		this.ctx = context;
+	}
+
+	public TipDialog(Context context, int theme) {
+		super(context, theme);
+		// TODO Auto-generated constructor stub
+		this.ctx = context;
+	}
+	
+
+}

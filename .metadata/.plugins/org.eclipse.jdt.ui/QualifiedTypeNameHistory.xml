@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="java.lang.CharSequence"/>
-<fullyQualifiedTypeName name="com.wosai.upaydemo.wight.BaseFragment"/>
 <fullyQualifiedTypeName name="com.wosai.upaydemo.R.drawable"/>
 <fullyQualifiedTypeName name="com.wosai.upaydemo.wight.FragmentAdapter"/>
 <fullyQualifiedTypeName name="com.wosai.upaydemo.AlipayFragment"/>
@@ -60,4 +57,7 @@
 <fullyQualifiedTypeName name="com.wosai.upaydemo.bean.DealInfo"/>
 <fullyQualifiedTypeName name="cn.wosai.upay.OrderInfo"/>
 <fullyQualifiedTypeName name="com.wosai.upaydemo.utils.EnvUtil"/>
+<fullyQualifiedTypeName name="android.view.Window"/>
+<fullyQualifiedTypeName name="android.view.WindowManager"/>
+<fullyQualifiedTypeName name="android.view.WindowManager.LayoutParams"/>
 </qualifiedTypeNameHistroy>

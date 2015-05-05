@@ -1,0 +1,34 @@
+package com.wosai.upaydemo.widget;
+
+import com.wosai.upaydemo.R;
+
+import android.app.Dialog;
+import android.content.Context;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class TipDialog extends Dialog{
+
+	Context ctx;
+	Button mQuery;
+	Button mRevoke;
+	public TipDialog(Context context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+		this.ctx = context;
+	}
+
+	public TipDialog(Context context, int theme) {
+		super(context, theme);
+		// TODO Auto-generated constructor stub
+		this.ctx = context;
+	}
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		this.setContentView(R.layout.dialog_error);
+		mQuery = findViewById(R.id.tvQuery)
+	}
+}

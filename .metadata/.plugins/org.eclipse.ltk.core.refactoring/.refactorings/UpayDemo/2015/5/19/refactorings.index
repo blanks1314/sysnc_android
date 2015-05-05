@@ -19,3 +19,6 @@
 1430734591140	Encapsulate field 'orderId'
 1430735516935	Copy file
 1430735540087	Rename resource 'iteam_head_view.xml'
+1430805323197	Rename type 'DialogError'
+1430805607814	Copy file
+1430816420939	Rename type 'ViewUtils'

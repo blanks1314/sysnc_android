@@ -1,0 +1,119 @@
+package com.wosai.upaydemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Dialog;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+
+import cn.wosai.upay.OrderInfo;
+import cn.wosai.upay.UpayCallBack;
+import cn.wosai.upay.UpayResult;
+import cn.wosai.upay.UpayTask;
+
+import com.wosai.upaydemo.HomeActivity.IGetData;
+import com.wosai.upaydemo.bean.DealInfo;
+import com.wosai.upaydemo.utils.DBUtil;
+import com.wosai.upaydemo.utils.EnvUtil;
+import com.wosai.upaydemo.utils.ViewUtil;
+import com.wosai.upaydemo.widget.BaseFragment;
+import com.wosai.upaydemo.widget.TipDialog;
+
+public class RecordFragment extends BaseFragment {
+	IGetData mDaGetData;
+	List<OrderInfo> mInfo = new ArrayList<OrderInfo>();
+	RecordAdapter adapter;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater,
+			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		View view = inflater.inflate(R.layout.fragment_record, null);
+		initView(view, container);
+		return view;
+	}
+
+	private void initView(View v, ViewGroup vg) {
+		mDaGetData = ((HomeActivity) getActivity()).getIGetData();
+		mInfo.clear();
+		mInfo.addAll(EnvUtil.parseOrderInfo(DBUtil.getOperation(getActivity())
+				.findAll(DealInfo.class), mDaGetData));
+		adapter = new RecordAdapter(getActivity(), mInfo);
+		View view = LayoutInflater.from(getActivity()).inflate(
+				R.layout.view_head, null);
+		ListView listView = (ListView) v.findViewById(R.id.lv_record);
+		listView.addHeaderView(view);
+		listView.setAdapter(adapter);
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(final AdapterView<?> parent, View view,
+					final int position, long id) {
+				// TODO Auto-generated method stub
+				final TipDialog dialog = new TipDialog(getActivity(),
+						R.style.Translucent_NoTitle);
+				int[] loc = new int[2];
+				view.getLocationInWindow(loc);
+				dialog.setY(loc[1]);
+				dialog.setQuerClick(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						dialog.dismiss();
+						UpayTask.getInstance(getActivity()).queryOrder(
+								(OrderInfo) parent.getItemAtPosition(position),
+								new UpayCallBack() {
+
+									@Override
+									public void onExecuteResult(UpayResult arg0) {
+										// TODO Auto-generated method stub
+										ViewUtil.showError(arg0.toString(),
+												getActivity());
+									}
+								});
+					}
+				});
+
+				dialog.setRevokeClick(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						dialog.dismiss();
+						final Dialog d = ViewUtil.createLoadingDialog(
+								getActivity(), "退款中....");
+						d.show();
+						OrderInfo orderInfo = (OrderInfo) parent.getItemAtPosition(position);
+						UpayTask.getInstance(getActivity()).revoke(
+								(OrderInfo) parent.getItemAtPosition(position),
+								new UpayCallBack() {
+
+									@Override
+									public void onExecuteResult(UpayResult arg0) {
+										// TODO Auto-generated method stub
+										d.dismiss();
+										if (arg0.getState() == 2) {
+											mInfo.get(position - 1).setRemark(
+													"已退款");
+											DBUtil.getOperation(getActivity())
+													.update(mInfo
+															.get(position - 1));
+											adapter.notifyDataSetChanged();
+										}
+									}
+								});
+					}
+				});
+				dialog.show();
+			}
+		});
+	}
+}

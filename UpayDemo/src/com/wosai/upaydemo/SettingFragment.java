@@ -20,7 +20,7 @@ import cn.wosai.upay.UpayTask;
 
 import com.wosai.upaydemo.HomeActivity.IGetData;
 import com.wosai.upaydemo.utils.CheckUtil;
-import com.wosai.upaydemo.utils.ViewUtils;
+import com.wosai.upaydemo.utils.ViewUtil;
 import com.wosai.upaydemo.widget.BaseFragment;
 
 public class SettingFragment extends BaseFragment implements OnClickListener,
@@ -132,7 +132,8 @@ public class SettingFragment extends BaseFragment implements OnClickListener,
 
 			order.setAppId(textAppId.getText().toString());
 			order.setAppKey(textAppKey.getText().toString());
-			order.setAmount(Long.parseLong(editAmount.getText().toString()));
+			order.setAmount(editAmount.getText().toString().isEmpty() ? 0L
+					: Long.parseLong(editAmount.getText().toString()));
 			order.setOrderId(editOrderId.getText().toString().isEmpty() ? System
 					.currentTimeMillis() + ""
 					: editOrderId.getText().toString());
@@ -155,23 +156,23 @@ public class SettingFragment extends BaseFragment implements OnClickListener,
 	public boolean checkData() {
 		// TODO Auto-generated method stub
 		if (CheckUtil.isEmpty(textAppId)) {
-			ViewUtils.showError("AppId不能为空！", getActivity());
+			ViewUtil.showError("AppId不能为空！", getActivity());
 			return false;
 		}
 		if (CheckUtil.isEmpty(textAppKey)) {
-			ViewUtils.showError("AppKey不能为空！", getActivity());
+			ViewUtil.showError("AppKey不能为空！", getActivity());
 			return false;
 		}
 		if (CheckUtil.isEmpty(textStoreId)) {
-			ViewUtils.showError("StoreId不能为空！", getActivity());
+			ViewUtil.showError("StoreId不能为空！", getActivity());
 			return false;
 		}
 		if (CheckUtil.isEmpty(editAmount)) {
-			ViewUtils.showError("请输入商品价格", getActivity());
+			ViewUtil.showError("请输入交易金额！", getActivity());
 			return false;
 		}
 		if (CheckUtil.isEmpty(editSubject)) {
-			ViewUtils.showError("请输入商品名称！", getActivity());
+			ViewUtil.showError("请输入商品名称！", getActivity());
 			return false;
 		}
 		return true;

@@ -1,0 +1,76 @@
+package com.wosai.upaydemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+import cn.wosai.upay.OrderInfo;
+
+public class RecordAdapter extends BaseAdapter {
+
+	private List<OrderInfo> infos = new ArrayList<OrderInfo>();
+	private LayoutInflater inflater;
+
+	public RecordAdapter(Context ctx, List<OrderInfo> infos) {
+		this.infos = infos;
+		this.inflater = LayoutInflater.from(ctx);
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return infos.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return infos.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		ViewHolder holder = null;
+		if(convertView == null){
+			holder = new ViewHolder();
+			convertView = inflater.inflate(R.layout.iteam_record, null);
+			holder.textAmount = (TextView) convertView.findViewById(R.id.tvAmount);
+			holder.textMethod = (TextView) convertView.findViewById(R.id.tvMethod);
+			holder.textOrderId = (TextView) convertView.findViewById(R.id.tvOrderId);
+			holder.textState = (TextView) convertView.findViewById(R.id.tvState);
+			holder.textTime = (TextView) convertView.findViewById(R.id.tvTime);
+			convertView.setTag(holder);
+			
+		}else{
+			holder = (ViewHolder) convertView.getTag();
+		}
+		holder.textAmount.setText(infos.get(position).getAmount());
+		holder.textMethod.setText(infos.get(position).getPayMethod().name())
+		
+		
+		
+		return convertView;
+	}
+
+	class ViewHolder{
+		private TextView textOrderId;
+		private TextView textAmount;
+		private TextView textMethod;
+		private TextView textState;
+		private TextView textTime;
+	}
+	
+	
+}

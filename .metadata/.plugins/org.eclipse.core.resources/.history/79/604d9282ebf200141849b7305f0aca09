@@ -1,0 +1,26 @@
+package com.wosai.upaydemo.widget;
+
+import android.app.Dialog;
+import android.content.Context;
+
+public class TipDialog extends Dialog{
+
+	Context ctx;
+	public TipDialog(Context context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+	}
+
+	public TipDialog(Context context, boolean cancelable,
+			OnCancelListener cancelListener) {
+		super(context, cancelable, cancelListener);
+		// TODO Auto-generated constructor stub
+	}
+
+	public TipDialog(Context context, int theme) {
+		super(context, theme);
+		// TODO Auto-generated constructor stub
+	}
+	
+
+}

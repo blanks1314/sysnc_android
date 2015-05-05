@@ -16,9 +16,9 @@ public class DealInfo implements Serializable {
 	private String acount;
 	private String bNo;
 	private String cNo;
-	private PayMethod payMethod;
+	private String payMethod;
 	private String time;
-	private int state;
+	private String state;
 	private String orderId;
 
 	public long getAmount() {
@@ -54,11 +54,11 @@ public class DealInfo implements Serializable {
 	}
 
 	public PayMethod getPayMethod() {
-		return payMethod;
+		return PayMethod.valueOf(payMethod);
 	}
 
 	public void setPayMethod(PayMethod payMethod) {
-		this.payMethod = payMethod;
+		this.payMethod = payMethod.name();
 	}
 
 	public String getTime() {
@@ -69,11 +69,11 @@ public class DealInfo implements Serializable {
 		this.time = time;
 	}
 
-	public int getState() {
+	public String getState() {
 		return state;
 	}
 
-	public void setState(int state) {
+	public void setState(String state) {
 		this.state = state;
 	}
 

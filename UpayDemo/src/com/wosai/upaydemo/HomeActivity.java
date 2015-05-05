@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import cn.wosai.upay.OrderInfo;
 
-import com.wosai.upaydemo.utils.ViewUtils;
+import com.wosai.upaydemo.utils.ViewUtil;
 import com.wosai.upaydemo.widget.BaseFragment;
 import com.wosai.upaydemo.widget.FragmentAdapter;
 import com.wosai.upaydemo.widget.IconTabPageIndicator;
@@ -41,7 +41,7 @@ public class HomeActivity extends FragmentActivity {
 		textTitle = (TextView) findViewById(R.id.tv_title);
 		FragmentAdapter adapter = new FragmentAdapter(initFragment(),
 				getSupportFragmentManager());
-		mDialog = ViewUtils.createLoadingDialog(this, "数据加载中....");
+		mDialog = ViewUtil.createLoadingDialog(this, "数据加载中....");
 		mViewPager.setAdapter(adapter);
 		mIndicator.setViewPager(mViewPager);
 		mIndicator.setTitles(new String[] { "设置", "银联支付", "支付宝支付", "微信支付",
