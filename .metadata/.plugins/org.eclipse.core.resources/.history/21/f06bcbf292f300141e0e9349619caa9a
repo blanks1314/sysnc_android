@@ -1,0 +1,24 @@
+package com.wosai.upaydemo;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class ModifyActivity extends Activity {
+
+	private Button btnOK;
+	private Button btnCancel;
+	private EditText textInfo;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_modifyinfo);
+		btnOK = (Button) findViewById(R.id.btn_ok);
+		btnCancel = findViewById(R.id.btn_cancel);
+	}
+
+}

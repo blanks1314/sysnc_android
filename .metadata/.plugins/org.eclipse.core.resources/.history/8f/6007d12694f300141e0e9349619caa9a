@@ -1,0 +1,37 @@
+package com.wosai.upaydemo;
+
+import com.wosai.upaydemo.utils.ViewUtil;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class ModifyActivity extends Activity {
+
+	private Button btnOK;
+	private Button btnCancel;
+	private EditText editInfo;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_modifyinfo);
+		btnOK = (Button) findViewById(R.id.btn_ok);
+		btnCancel = (Button) findViewById(R.id.btn_cancel);
+		editInfo = (EditText) findViewById(R.id.et_content);
+	}
+
+	private void setResult(){
+		if(TextUtils.isEmpty(editInfo.getText().toString())){
+			ViewUtil.showError("«Î ‰»Î"+getIntent().getStringExtra("info"), this);
+		}
+		Intent  i = new Intent();
+		i.putExtra("data", editInfo.getText().toString());
+	}
+	
+}

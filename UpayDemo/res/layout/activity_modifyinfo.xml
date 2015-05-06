@@ -36,6 +36,7 @@
         <Button
         android:id="@+id/btn_ok"
         style="@style/btn_style_2"
+        android:background="@drawable/btn_selecter_cancel"
         android:layout_marginLeft="10dp"
         android:text="确定" 
         android:layout_gravity="center_horizontal"/>

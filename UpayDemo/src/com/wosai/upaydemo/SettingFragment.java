@@ -88,16 +88,19 @@ public class SettingFragment extends BaseFragment implements OnClickListener,
 		switch (key) {
 		case R.id.iv_2:
 			i.putExtra("data", textAppId.getText().toString());
+			i.putExtra("info", "AppId");
 			startActivityForResult(i, REQUEST_CODE1);
 
 			break;
 		case R.id.iv_3:
 			i.putExtra("data", textAppKey.getText().toString());
+			i.putExtra("info", "AppKey");
 			startActivityForResult(i, REQUEST_CODE2);
 
 			break;
 		case R.id.iv_1:
 			i.putExtra("data", textStoreId.getText().toString());
+			i.putExtra("info", "StoreId");
 			startActivityForResult(i, REQUEST_CODE3);
 			break;
 
